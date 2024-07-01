@@ -31,7 +31,7 @@ import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Outlet } from "react-router-dom";
 
-function SharedLayout() {
+function SidebarLayout() {
   return (
     <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
       <div className="hidden border-r bg-muted/40 md:block">
@@ -39,7 +39,7 @@ function SharedLayout() {
           <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
             <a href="/" className="flex items-center gap-2 font-semibold">
               <Package2 className="h-6 w-6" />
-              <span className="">Acme Inc</span>
+              <span className="">Expense Manager</span>
             </a>
           </div>
           <div className="flex-1">
@@ -50,6 +50,20 @@ function SharedLayout() {
               >
                 <Home className="h-4 w-4" />
                 Home
+              </a>
+              <a
+                href="#"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-foreground"
+              >
+                <LineChart className="h-4 w-4" />
+                Expenses
+              </a>
+              <a
+                href="#"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-foreground"
+              >
+                <Users className="h-4 w-4" />
+                Users
               </a>
             </nav>
           </div>
@@ -75,7 +89,7 @@ function SharedLayout() {
                   className="flex items-center gap-2 text-lg font-semibold"
                 >
                   <Package2 className="h-6 w-6" />
-                  <span className="sr-only">Acme Inc</span>
+                  <span className="sr-only">Expense Manager</span>
                 </a>
                 <a
                   href="#"
@@ -83,6 +97,20 @@ function SharedLayout() {
                 >
                   <Home className="h-5 w-5" />
                   Home
+                </a>
+                <a
+                  href="#"
+                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
+                >
+                  <LineChart className="h-5 w-5" />
+                  Expenses
+                </a>
+                <a
+                  href="#"
+                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
+                >
+                  <Users className="h-5 w-5" />
+                  Users
                 </a>
               </nav>
             </SheetContent>
@@ -115,4 +143,4 @@ function SharedLayout() {
   )
 }
 
-export default SharedLayout;
+export default SidebarLayout;
